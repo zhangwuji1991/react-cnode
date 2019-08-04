@@ -23,7 +23,7 @@ li{
 .wrap{
   width: 90%;
   margin: 0 auto;
-  max-width: 1400px;
-  min-width: 960px;
+  min-width: 1300px;
   margin: 15px auto;
+  /* border: 1px solid red; */
 }

@@ -86,21 +86,11 @@ class Home extends React.Component{
 							<p>无人回复的话题</p>
 						</div>
 						<div className="plist">
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-						</div>
-					</div>
-					<div className="cnode">
-						<div className="titles">
-							<p>积分榜 TOP 100 </p>
-						</div>
-						<div className="plist">
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-							<p>如何从开发流程层面实现更高效的持续交付</p>
-							<p>如何从开发流程层面实现更高效的持续交付</p>
+							<p>使用 elev 定时部署 Let's Encrypt 通过阿...</p>
+							<p>coolie PK webpack 之三：模块构建</p>
+							<p>javascript 模块加载器——coolie</p>
+							<p>howdo——如何做，一个简易的异步流程</p>
+							<p>STATIC TRUSTED SERVER => sts</p>
 						</div>
 					</div>
 					<div className="cnode">

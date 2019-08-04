@@ -16,3 +16,10 @@ export const GettopicData = params => {
 	 	res => res.data
 	)
 };
+
+//获取用户详情
+export const GetuserData = params => {
+	return axios.get(`${base}/api/v1/user/${params}`).then(
+		res => res.data
+	)
+};

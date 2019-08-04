@@ -9,7 +9,7 @@ class About extends React.Component{
 			<div className="wrap about">
 				<div className="sidebar">
 					<div className="cnode">
-						<div class="inner">
+						<div className="inner">
 							<p>CNode：Node.js专业中文社区</p>
 							<div>
 								您可以<a href="/signin">登录</a>或<a href="/signup">注册</a>, 也可以
@@ -20,15 +20,17 @@ class About extends React.Component{
 						</div>
 					</div>
 					<div className="cnode">
-						<div class="inner ads">
+						<div className="inner ads">
 							<img src="https://static.cnodejs.org/Fn4D6BhOTz1IswvmzeZ1q7QW1ls_" alt="" />
 							<img src="https://static.cnodejs.org/FlajCCXkxZaOsuWp3k0iaiqfrJaS" alt="" />
 							<img src="https://static.cnodejs.org/FufeQ8S-sz6aKH5bvPXzVXvQG2Z-" alt="" />
 						</div>
 					</div>
 					<div className="cnode">
-						<div class="inner ads">
+						<div className="titles">
 							<p>友情社区</p>
+						</div>
+						<div className="ads imgs">
 							<img src="https://static2.cnodejs.org/public/images/ruby-china-20150529.png" alt="" />
 							<img src="https://static2.cnodejs.org/public/images/golangtc-logo.png" alt="" />
 							<img src="https://static2.cnodejs.org/public/images/phphub-logo.png" alt="" />
