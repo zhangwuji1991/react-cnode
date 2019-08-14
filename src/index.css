@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+min-width: 1200px;
+
  
 }
 
@@ -21,9 +23,9 @@ li{
    background-color: #bfbfbf;
 }
 .wrap{
-  width: 90%;
+  width: 72%;
   margin: 0 auto;
-  min-width: 1300px;
+  min-width: 1200px;
   margin: 15px auto;
-  /* border: 1px solid red; */
+  /*border: 1px solid red;*/
 }

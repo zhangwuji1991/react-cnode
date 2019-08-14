@@ -1,5 +1,6 @@
 import React from 'react'
 import { List, Avatar,Skeleton} from 'antd';
+import {handleDate} from '../../util'
 import './index.less'
 
 class TopiRelpy extends React.Component{
@@ -21,7 +22,7 @@ class TopiRelpy extends React.Component{
 			                    <p>
 				                    <span className="author">{item.author.loginname}</span>
 				                    <span className="indexs">{index+1}楼</span>
-				                    <span className="create_time">{item.create_at}</span>
+				                    <span className="create_time">{handleDate(item.create_at)}</span>
 			                    </p>
 		                    }
 		                    description={<p dangerouslySetInnerHTML={{ __html: item.content }}  />}

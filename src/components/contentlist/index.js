@@ -1,6 +1,7 @@
 import React from 'react'
 import { List, Avatar,Skeleton} from 'antd';
 import {withRouter} from 'react-router-dom'
+import {handleDate} from '../../util'
 import './index.less'
 
 class ContentList extends React.Component {
@@ -25,7 +26,7 @@ class ContentList extends React.Component {
                         this.props.history.push(`/topic/${item.id}`)
                       }}>{item.title}</span>
                     }
-                    description={item.create_at}
+                    description={handleDate(item.create_at)}
                   />
                   <div className="reply">{item.reply_count}/{item.visit_count}</div>
                 </Skeleton>

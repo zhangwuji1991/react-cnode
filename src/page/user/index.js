@@ -1,8 +1,9 @@
 import React from "react"
 import { GetuserData } from '../../api/api';
 import { Avatar, Icon } from 'antd';
+import {ObjToArr} from '../../util'
 import Slot from '../../components/slot'
-import ContentList from '../../components/contentlist'
+import UserList from './list'
 import './index.less'
 
 class User extends React.Component{
@@ -19,7 +20,6 @@ class User extends React.Component{
     }
     getDate(id) {
         GetuserData(id).then(res => {
-            console.log(res.data)
             this.setState({
                 userdata: res.data,
                 loadding: false
@@ -27,6 +27,9 @@ class User extends React.Component{
         })
     }
     render(){
+        const num = 5
+        const length_replies = ObjToArr(this.state.userdata.recent_replies).length
+        const length_topics  = ObjToArr(this.state.userdata.recent_topics).length
         return (
             <div className="wrap user">
                 <div className="sidebar">
@@ -84,23 +87,52 @@ class User extends React.Component{
                     <div className="content-list">
                         <div className="cnode">
                             <div className="titles">
-                                <p>友情社区</p>
+                                <p>最近创建的话题</p>
                             </div>
-                            <ContentList
-                                data={this.state.userdata.recent_replies}
-                                loading={this.state.loading}
-                                // onClick={this.menuClickHandle}
-                            />
+                            {
+                                length_replies > num ? 
+                                <div>
+                                    <UserList
+                                        data={ObjToArr(this.state.userdata.recent_replies).slice(0,5)}
+                                        loading={this.state.loading}
+                                        // onClick={this.menuClickHandle}
+                                    />
+                                    <div className="titles">
+                                        <p>查看更多>></p>
+                                    </div>
+                                </div>  : 
+
+                                <UserList
+                                    data={this.state.userdata.recent_replies}
+                                    loading={this.state.loading}
+                                    // onClick={this.menuClickHandle}
+                                />
+                            }    
                         </div>
                         <div className="cnode">
                             <div className="titles">
-                                <p>友情社区</p>
+                                <p>最近参与的话题</p>
                             </div>
-                            <ContentList
-                                data={this.state.userdata.recent_topics.slice(0,4)}
-                                loading={this.state.loading}
-                            // onClick={this.menuClickHandle}
-                            />
+                            {
+                                length_topics > num ?  
+
+                                <div>
+                                    <UserList
+                                        data={ObjToArr(this.state.userdata.recent_topics).slice(0,5)}
+                                        loading={this.state.loading}
+                                        // onClick={this.menuClickHandle}
+                                    />
+                                    <div className="titles">
+                                        <p>查看更多>></p>
+                                    </div>
+                                </div>  :   
+
+                                <UserList
+                                    data={this.state.userdata.recent_topics}
+                                    loading={this.state.loading}
+                                    // onClick={this.menuClickHandle}
+                                />
+                            }
                         </div>
                     </div>
                 </div>
